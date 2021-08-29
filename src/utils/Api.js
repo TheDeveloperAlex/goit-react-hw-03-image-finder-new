@@ -7,7 +7,6 @@ export const getImagesApi = ({ query, page }) => {
     .then((res) => res.json())
     .then((res) => res.hits)
     .then((res) => {
-      console.log(res);
       return res;
     });
 };

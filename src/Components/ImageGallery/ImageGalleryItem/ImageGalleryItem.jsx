@@ -30,12 +30,12 @@ class ImageGalleryItem extends Component {
            <>
             {
               this.props.images.map((item) => (
-            <li className={s.ImageGalleryItem}>
+                <li className={s.ImageGalleryItem} key={item.id}>
               <img
                 onClick={this.onModalOpen}
                           src={item.webformatURL}
                           id={item.id}
-                alt=""
+                    alt={item.tag }
                 className={s.ImageGalleryItemImage}
                           
                       />

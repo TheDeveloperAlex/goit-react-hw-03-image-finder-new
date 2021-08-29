@@ -50,7 +50,12 @@ class ImageGallery extends Component {
     const { imgs, loading } = this.state;
     return (
       <>
-        {loading && (
+        
+        <div className={s.div}>
+          <ul className={s.ImageGallery}>
+            <ImageGalleryItem images={imgs} />
+          </ul>
+          {loading && (
           <Loader
             type="Circles"
             color="#00BFFF"
@@ -59,11 +64,6 @@ class ImageGallery extends Component {
             timeout={3000} //3 secs
           />
         )}
-        <div className={s.div}>
-          <ul className={s.ImageGallery}>
-            <ImageGalleryItem images={imgs} />
-          </ul>
-
           {imgs.length > 0 && (
             <Button click={this.onHandelClick} page={this.state.page} />
           )}
