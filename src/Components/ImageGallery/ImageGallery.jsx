@@ -6,7 +6,7 @@ import ImageGalleryItem from "./ImageGalleryItem/ImageGalleryItem";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-// import st from "../Modal/Modal.modal.css";
+
 class ImageGallery extends Component {
   state = {
     imgs: [],
@@ -56,15 +56,18 @@ class ImageGallery extends Component {
           <ul className={s.ImageGallery}>
             <ImageGalleryItem images={imgs} />
           </ul>
-          {loading && (
-          <Loader
-            type="Circles"
-            color="#00BFFF"
-            height={100}
-            width={100}
-            timeout={3000} //3 secs
-          />
-        )}
+          <div className={s.divLoader}>
+              {loading && (
+            <Loader
+              type="Circles"
+              color="#00BFFF"
+              height={150}
+              width={150}
+              timeout={3000} //3 secs
+            />
+          )}
+          </div>
+          
           {imgs.length > 0 && (
             <Button click={this.onHandelClick} page={this.state.page} />
           )}

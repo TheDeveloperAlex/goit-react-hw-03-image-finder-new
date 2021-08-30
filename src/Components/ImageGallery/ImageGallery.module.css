@@ -2,6 +2,11 @@
   padding-top: 20px;
 }
 
+.divLoader {
+  display: flex;
+  justify-content: center;
+}
+
 .ImageGallery {
   display: grid;
   max-width: calc(100vw - 48px);

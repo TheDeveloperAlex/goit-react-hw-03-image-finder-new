@@ -12,13 +12,13 @@ class Modal extends Component {
     }
 
      getImage = () => {
-        // this.setState({ loading: true });
+        
         
         return this.props.imgs.find(item => (
             item.id.toString() === this.props.id.toString()
         ))
             
-            //  this.setState({ loading: false })
+            
             
        
         }
