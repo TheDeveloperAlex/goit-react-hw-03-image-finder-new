@@ -28,8 +28,7 @@ class Modal extends Component {
         window.addEventListener("keydown", this.handleEscape);
         const body = document.querySelector("body");
         body.style.overflow = "hidden";
-        
-        console.log(this.getImage().largeImageURL);
+    
 
         this.setState({ imgModal: this.getImage().largeImageURL });
 

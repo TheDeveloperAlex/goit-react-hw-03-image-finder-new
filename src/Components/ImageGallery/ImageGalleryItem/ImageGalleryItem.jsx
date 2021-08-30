@@ -10,7 +10,6 @@ class ImageGalleryItem extends Component {
     }
 
     onModalOpen = (e) => {
-    console.log(e.target);
     
         this.setState({ id: e.target.id });
     this.setState((prev) => ({
@@ -39,7 +38,6 @@ class ImageGalleryItem extends Component {
                 className={s.ImageGalleryItemImage}
                           
                       />
-                      {/* {console.log(item.largeImageURL) } */}
                       
                   </li>
                    

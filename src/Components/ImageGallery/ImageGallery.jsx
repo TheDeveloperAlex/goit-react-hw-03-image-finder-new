@@ -17,6 +17,7 @@ class ImageGallery extends Component {
 
   getImages = ({ query, page }) => {
     this.setState({ loading: true });
+    
     getImagesApi({ query, page })
       .then((images) =>
         this.setState((prev) => ({
@@ -30,7 +31,7 @@ class ImageGallery extends Component {
     const { query } = this.props;
 
     if (prevProps.query !== query) {
-      this.getImages({ query: query });
+      this.getImages({ query: query, page: 1 });
       this.setState({ page: 2, imgs: [] });
     }
     if (this.state.isTarget) {
